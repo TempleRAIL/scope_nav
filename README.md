@@ -60,7 +60,7 @@ sudo sh turtlebot2_noetic_install.sh
 4. install DRL-VO ROS navigation packages:
 ```
 cd ~/catkin_ws/src
-git clone https://github.com/TempleRAIL/scope_nav
+git clone https://github.com/TempleRAIL/scope_nav.git
 git clone https://github.com/TempleRAIL/robot_gazebo.git
 git clone https://github.com/TempleRAIL/pedsim_ros_with_gazebo.git
 git clone https://github.com/TempleRAIL/drl_vo_nav.git
@@ -85,7 +85,7 @@ singularity shell --nv drl_vo_container.sif
 source /etc/.bashrc
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
-git clone https://github.com/TempleRAIL/scope_nav
+git clone https://github.com/TempleRAIL/scope_nav.git
 git clone https://github.com/TempleRAIL/robot_gazebo.git
 git clone https://github.com/TempleRAIL/pedsim_ros_with_gazebo.git
 git clone https://github.com/TempleRAIL/drl_vo_nav.git
