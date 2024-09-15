@@ -1,0 +1,7 @@
+<launch>
+
+  <!-- VAE INPUT DATA Publisher -->
+  <node name="vae_input_data_pub" pkg="sogmp_fast" type="vae_input_data_pub.py"  output="screen">
+  </node>
+
+</launch>

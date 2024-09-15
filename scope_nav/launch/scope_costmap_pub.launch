@@ -1,0 +1,19 @@
+<launch>
+  <arg name="statistics_file"   default="$(find scope_nav)/src/model/truncnorm_skewcauchy_statistics_tables/truncnorm_skewcauchy_entropy_pred_time_6.npy"/>
+  <arg name="model_file"   default="$(find scope_nav)/src/model/so_scope_model.pth"/>
+	
+  <!-- SCOPE INPUT DATA Publisher -->
+  <node name="scope_input_data_pub" pkg="scope_nav" type="scope_input_data_pub.py"  output="screen">
+  </node>
+
+  <!-- SCOPE Costmap Publisher -->
+  <node name="scope_costmap_data_pub" pkg="scope_nav" type="scope_costmap_data_pub.py"  output="screen">
+    <param name="statistics_file" value="$(arg statistics_file)" type="string"/>
+    <param name="model_file" value="$(arg model_file)" type="string"/>
+  </node>
+
+  <!-- SCOPE DATA Visualizer Publisher -->
+  <node name="scope_data_visualize_pub" pkg="scope_nav" type="scope_data_visualize_pub.py"  output="screen">
+  </node>
+
+</launch>
