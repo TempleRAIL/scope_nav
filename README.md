@@ -1,6 +1,6 @@
 # SCOPE: Stochastic Cartographic Occupancy Prediction Engine for Uncertainty-Aware Dynamic Navigation
 
-Implementation code for our paper ["SCOPE: Stochastic Cartographic Occupancy Prediction Engine for Uncertainty-Aware Dynamic Navigation"](https://doi.org/10.1109/TRO.2025.3578234) [[arXiv](https://arxiv.org/abs/2407.00144.pdf)]. 
+Implementation code for our paper ["SCOPE: Stochastic Cartographic Occupancy Prediction Engine for Uncertainty-Aware Dynamic Navigation"](https://doi.org/10.1109/TRO.2025.3578234) [[arXiv](https://arxiv.org/abs/2407.00144.pdf)] in IEEE Transactions on Robotics (T-RO) 2025. 
 This repository contains our costmap-based predictive uncertainty-aware navigation framework to incorporate OGM prediction and its uncertainty information (from our [SCOPE](https://github.com/TempleRAIL/scope) family) into current existing navigation control policies (model-based or learning-based) to improve their safe navigation performance in crowded dynamic scenes.
 We present two examples of applying the SCOPE-based framework to navigation control policies: dwa_so_scope_pu for [DWA](http://wiki.ros.org/dwa_local_planner?distro=noetic) control policy and drl_vo_so_scope_pu for [DRL-VO](https://github.com/TempleRAIL/drl_vo_nav) control policy in our [3D human-robot interaction Gazebo simulator](https://github.com/TempleRAIL/pedsim_ros_with_gazebo).
 Video demos can be found at [multimedia demonstrations](https://youtu.be/xJBtWQDLU04).
