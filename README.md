@@ -1,8 +1,8 @@
 # SCOPE: Stochastic Cartographic Occupancy Prediction Engine for Uncertainty-Aware Dynamic Navigation
 
-Implementation code for our paper ["SCOPE: Stochastic Cartographic Occupancy Prediction Engine for Uncertainty-Aware Dynamic Navigation"](https://arxiv.org/abs/2407.00144.pdf). 
-This repository contains our costmap-based predictive uncertainty-aware navigation framework to incorporate OGM prediction and its uncertainty information (from our [SCOPE](https://github.com/TempleRAIL/scope) family) into current existing navigation control policies (model-based or learningbased) to improve their safe navigation performance in crowded dynamic scenes.
-We present two examples of applying the SCOPE-based framework to navigation control policies: dwa_so_scope_pu for[DWA](http://wiki.ros.org/dwa_local_planner?distro=noetic) control policy and drl_vo_so_scope_pu for [DRL-VO](https://github.com/TempleRAIL/drl_vo_nav) control policy in our [3D human-robot interaction Gazebo simulator](https://github.com/TempleRAIL/pedsim_ros_with_gazebo).
+Implementation code for our paper ["SCOPE: Stochastic Cartographic Occupancy Prediction Engine for Uncertainty-Aware Dynamic Navigation"](https://doi.org/10.1109/TRO.2025.3578234) [[arXiv](https://arxiv.org/abs/2407.00144.pdf)]. 
+This repository contains our costmap-based predictive uncertainty-aware navigation framework to incorporate OGM prediction and its uncertainty information (from our [SCOPE](https://github.com/TempleRAIL/scope) family) into current existing navigation control policies (model-based or learning-based) to improve their safe navigation performance in crowded dynamic scenes.
+We present two examples of applying the SCOPE-based framework to navigation control policies: dwa_so_scope_pu for [DWA](http://wiki.ros.org/dwa_local_planner?distro=noetic) control policy and drl_vo_so_scope_pu for [DRL-VO](https://github.com/TempleRAIL/drl_vo_nav) control policy in our [3D human-robot interaction Gazebo simulator](https://github.com/TempleRAIL/pedsim_ros_with_gazebo).
 Video demos can be found at [multimedia demonstrations](https://youtu.be/xJBtWQDLU04).
  
 Here are two GIFs showing our DRL-VO control policy for navigating in the simulation and real world. 
@@ -138,12 +138,17 @@ You can then use the "2D Nav Goal" button on Rviz to set a random goal for the r
 
 ## Citation
 ```
-@article{xie2024scope,
-  title={SCOPE: Stochastic Cartographic Occupancy Prediction Engine for Uncertainty-Aware Dynamic Navigation},
+@ARTICLE{xiw2025scope,
   author={Xie, Zhanteng and Dames, Philip},
-  journal={arXiv preprint arXiv:2407.00144},
-  year={2024}
+  journal={IEEE Transactions on Robotics}, 
+  title={SCOPE: Stochastic Cartographic Occupancy Prediction Engine for Uncertainty-Aware Dynamic Navigation}, 
+  year={2025},
+  volume={41},
+  number={},
+  pages={4139-4158},
+  doi={10.1109/TRO.2025.3578234}
 }
+
 
 @inproceedings{xie2023sogmp,
   doi = {10.48550/ARXIV.2210.08577},
