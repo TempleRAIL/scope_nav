@@ -17,6 +17,9 @@ Specifically, we use prediction and uncertainty costmaps to tell the robot the p
 Note that each costmap grid cell of our proposed prediction and uncertainty costmaps has an initial constant cost, and we map each occupied grid cell of the prediction costmap and uncertainty costmap to a Gaussian obstacle value rather than a ``lethal'' obstacle value. 
 This is because the predicted obstacles and uncertainty regions are not real obstacle spaces. 
 
+### Traning SCOPE:
+If you need more information about training the SCOPE series predictors, please see our [SCOPE](https://github.com/TempleRAIL/scope) repository.
+
 ## Requirements:
 * Ubuntu 20.04
 * ROS-Noetic
