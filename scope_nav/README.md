@@ -66,7 +66,7 @@ git clone https://github.com/TempleRAIL/pedsim_ros_with_gazebo.git
 git clone https://github.com/TempleRAIL/drl_vo_nav.git
 cd ..
 catkin_make
-source ~/catkin_ws/devel/setup.sh
+source ~/catkin_ws/devel/setup.bash
 ```
 
 ### 2) Using singularity container: all required packages are installed
@@ -91,7 +91,7 @@ git clone https://github.com/TempleRAIL/pedsim_ros_with_gazebo.git
 git clone https://github.com/TempleRAIL/drl_vo_nav.git
 cd ..
 catkin_make
-source ~/catkin_ws/devel/setup.sh
+source ~/catkin_ws/devel/setup.bash
 ```
 
 4. ctrl + D to exit the singularity container.
@@ -118,7 +118,7 @@ You can then use the "2D Nav Goal" button on Rviz to set a random goal for the r
 cd ~
 singularity shell --nv drl_vo_container.sif
 source /etc/.bashrc
-source ~/catkin_ws/devel/setup.sh
+source ~/catkin_ws/devel/setup.bash
 roslaunch scope_nav dwa_so_scope_pu_nav.launch
 ```
 You can then use the "2D Nav Goal" button on Rviz to set a random goal for the robot, as shown below:
@@ -129,11 +129,26 @@ You can then use the "2D Nav Goal" button on Rviz to set a random goal for the r
 cd ~
 singularity shell --nv drl_vo_container.sif
 source /etc/.bashrc
-source ~/catkin_ws/devel/setup.sh
+source ~/catkin_ws/devel/setup.bash
 roslaunch scope_nav drl_vo_so_scope_pu_nav.launch
 ```
 You can then use the "2D Nav Goal" button on Rviz to set a random goal for the robot, as shown below:
 ![sending_goal_demo](demos/3.sending_goal_demo.gif "sending_goal_demo") 
+
+### Troubleshooting `RLException`
+If `roslaunch scope_nav dwa_so_scope_pu_nav.launch` reports
+`[dwa_so_scope_pu_nav.launch] is neither a launch file in package [scope_nav] nor is [scope_nav] a launch file name`,
+the launch file is usually present, but the current terminal has not loaded the catkin workspace environment yet.
+
+Before running any `roslaunch` command in a new terminal, rebuild and source the workspace in the same shell:
+```
+cd ~/catkin_ws
+catkin_make
+source ~/catkin_ws/devel/setup.bash
+rospack find scope_nav
+```
+
+If you are not using `bash`, source the setup file that matches your shell instead, for example `setup.zsh`.
 
 
 ## Citation
