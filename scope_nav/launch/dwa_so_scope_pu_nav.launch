@@ -39,7 +39,7 @@
   <node name="track_ped_pub" pkg="scope_nav" type="track_ped_pub.py" output="screen"/>
 
   <!-- Goal visualization -->
-  <node pkg="scope_nav" name="goal_visualize" type="goal_visualize.py" output="screen" />
+  <node pkg="scope_nav" name="goal_visualize_scope" type="goal_visualize.py" output="screen" />
 
   <!-- Rviz -->
   <include file="$(find scope_nav)/launch/view_navigation.launch" if="$(arg rviz)"/>
